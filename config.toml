@@ -1,0 +1,17 @@
+# gzts configuration
+
+[general]
+concurrency = 8              # base thread count (actual threads = concurrency * 4, max 64)
+high_compression = false     # true = level 6, false = level 1
+offset = "+0000"             # timezone offset for output filenames
+
+[paths]
+metadata_dir = "metadata"
+output_dir = "output"
+
+[templates]
+# Template source directories per file type
+# These are used to locate the gzipped XML template files
+LTE = "/data/templates/LTE/day_1"
+NR = "/data/templates/NR/day_1"
+NR_EBSN = "/data/templates/NR_EBSN/day_1"
